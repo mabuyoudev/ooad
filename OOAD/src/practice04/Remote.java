@@ -1,7 +1,7 @@
-package chapter02;
+package practice04;
 
 /**
- * 犬用ドアを遠隔操作するクラスです。
+ * リモコンのクラスです。
  * 
  * @author yusuke mabuchi
  *
@@ -16,15 +16,17 @@ public class Remote {
   /**
    * コンストラクタ
    * 
-   * @param door
-   *          DogDoorクラスのインスタンス
+   * @param DogDoorクラスのインスタンス
    */
   public Remote(DogDoor door) {
     this.door = door;
   }
 
+  /**
+   * リモコンのボタンが押されたときの処理
+   */
   public void pressButton() {
-    System.out.println("リモコンボタンが押された...");
+    System.out.println("Pressing the remote control button...");
     if (door.isOpen()) {
       door.close();
     } else {
